@@ -2,10 +2,13 @@ import Button from "./Button";
 import { GoBell, GoDownload, GoDatabase } from "react-icons/go";
 
 function App() {
+	const handleClick = () => {
+		console.log("CLICK");
+	};
 	return (
 		<div>
 			<div>
-				<Button primary>
+				<Button onClick={handleClick} primary>
 					<GoBell></GoBell>Buy Now
 				</Button>
 			</div>
@@ -16,7 +19,6 @@ function App() {
 			</div>
 			<div>
 				<Button warning>
-					{" "}
 					<GoDatabase></GoDatabase>Hide Ads!
 				</Button>
 			</div>
